@@ -55,5 +55,66 @@ $(document).ready(function() {
       }
     ]
   });
+
+  const inViewport = (elem) => {
+    let allElements = document.getElementsByClassName(elem);
+    let windowHeight = window.innerHeight;
+    const elems = () => {
+        for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
+            let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
+            let top = viewportOffset.top;  //  get the offset top
+            if(top < windowHeight) {
+                allElements[i].classList.add('animation');  //  add the class
+            } else{
+                allElements[i].classList.remove('in-viewport');  //  remove the class
+            }
+        }
+    }
+    elems();
+    window.addEventListener('scroll', elems);
+}
+
+inViewport("anime");
+
+
+const newViewport = (elem) => {
+    if ($(window).width() > 767) {
+        let allElements = document.getElementsByClassName(elem);
+        let windowHeight = window.innerHeight;
+        const elems = () => {
+            for (let i = 0; i < allElements.length; i++) {
+                let viewportOffset = allElements[i].getBoundingClientRect();
+                let top = viewportOffset.top + 400;
+                if(top < windowHeight) {
+                    console.log(allElements[i]);
+                    allElements[i].classList.add('inviewport');
+                } else{
+                    allElements[i].classList.remove('in-viewport'); 
+                }
+            }
+        }
+        elems();
+        window.addEventListener('scroll', elems);
+    } else {
+        let allElements = document.getElementsByClassName(elem);
+        let windowHeight = window.innerHeight;
+        const elems = () => {
+            for (let i = 0; i < allElements.length; i++) {
+                let viewportOffset = allElements[i].getBoundingClientRect();
+                let top = viewportOffset.top;
+                if(top < windowHeight) {
+                    console.log(allElements[i]);
+                    allElements[i].classList.add('inviewport');
+                } else{
+                    allElements[i].classList.remove('in-viewport'); 
+                }
+            }
+        }
+        elems();
+        window.addEventListener('scroll', elems);
+    }
+}
+
+newViewport("viewport");
     
 });
