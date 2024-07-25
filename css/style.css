@@ -522,6 +522,12 @@ input:focus {
   .main_back {
     left: -19%;
     bottom: -25%;
+    max-width: 1900px;
+  }
+}
+@media (min-width: 2100px) {
+  .main_back {
+    left: 0%;
   }
 }
 
@@ -640,6 +646,7 @@ input:focus {
 @media (min-width: 1200px) {
   .services {
     position: relative;
+    padding-bottom: 600px;
   }
   .services_sphere_one {
     border-radius: 50%;
@@ -780,6 +787,16 @@ input:focus {
   .services_slider {
     -webkit-transform: translateY(-40px);
             transform: translateY(-40px);
+    position: absolute;
+    left: 0px;
+    overflow: hidden;
+  }
+  .services_slider .slick-list {
+    overflow: visible;
+  }
+  .services_slider .slick-slide {
+    margin: 0 10px;
+    width: 575px;
   }
   .services_slider_item {
     padding: 60px 60px 158px 60px;
@@ -1073,6 +1090,12 @@ input:focus {
   }
 }
 @media (min-width: 1920px) {
+  .result_back {
+    height: 1538px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+  }
   .result_slider_wrap_item {
     height: 1080px;
   }
@@ -1896,6 +1919,8 @@ input:focus {
 @media (min-width: 1200px) {
   .marketing {
     margin-top: 300px;
+    overflow: hidden;
+    padding-bottom: 372px;
   }
   .marketing_block {
     -webkit-box-pack: start;
@@ -1922,6 +1947,12 @@ input:focus {
   .marketing_slider {
     -webkit-transform: translateY(-70px);
             transform: translateY(-70px);
+    position: absolute;
+    left: 0px;
+    overflow: hidden;
+  }
+  .marketing_slider .slick-list {
+    overflow: visible;
   }
   .marketing_slider .slick-slide {
     margin: 0 15px;
@@ -2171,6 +2202,10 @@ input:focus {
 @media (min-width: 1700px) {
   .callback_back {
     bottom: -10%;
+    max-width: 100%;
+    height: 903px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

@@ -14,6 +14,7 @@ $(document).ready(function() {
     $('.services_slider').slick({
       slidesToShow: 2,
       slidesToScroll: 1,
+      variableWidth: true,
       prevArrow: $('.services_title_btns_prev'),
       nextArrow: $('.services_title_btns_next')
     });
